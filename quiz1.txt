@@ -1,0 +1,207 @@
+
+public class main {
+    public static void main(String[] args){
+        Bmw bmw =new Bmw("aaa","mavi", 200,"marka",1000,13,"Binek",1999);
+        bmw.EkranaYazdir();
+
+    }
+}
+
+
+
+
+
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+
+public class Arac {
+    private String AracTuru;
+    private int YapimYili;
+    
+    //Constructor 1 bos
+    public Arac(){    
+        
+    }
+    
+    //Constructor 2
+    public Arac(String AracTuru,int YapimYili){
+        this.AracTuru=AracTuru;
+        this.YapimYili=YapimYili;       
+    }
+    
+    void EkranaYazdir(){
+        System.out.println("AracTuru = "+AracTuru);
+        System.out.println("YapimYili = "+YapimYili);
+    }
+    
+    String getAracTuru(){
+        return this.AracTuru;
+    }
+    void setAracTuru(String AracTuru){
+        this.AracTuru=AracTuru;
+    }
+    
+    int getYapimYili(){
+       return this.YapimYili; 
+    }
+    void setYapimYili(int YapimYili){
+        this.YapimYili=YapimYili;
+    }
+    
+    
+    
+    
+    
+ 
+    
+    
+    
+    
+    
+}
+
+
+
+
+
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class Otomobil extends Arac{
+    
+    private String Marka;
+    private int Agirlik;
+    private int TekerSayisi;
+            
+      
+    public Otomobil(){
+        
+    }
+    
+    public Otomobil(String Marka,int Agirlik,int TekerSayisi,String AracTuru,int YapimYili){  
+        super(AracTuru,YapimYili);
+        this.Marka=Marka;
+        this.Agirlik=Agirlik;
+        this.TekerSayisi=TekerSayisi;
+    }
+    
+    
+    String getMarka(){
+        return Marka;
+    }
+    
+    void setMarka(String Marka){
+        this.Marka=Marka;
+    }
+    
+    int getAgirlik(){
+        return Agirlik;
+    }
+    void setAgirlik(int Agirlik){
+        this.Agirlik=Agirlik;
+    }
+    
+    int getTekerSayisi(){
+        return TekerSayisi;
+    }
+    
+    void setTekerSayisi(int TekerSayisi){
+        this.TekerSayisi=TekerSayisi;
+    }
+    
+    void EkranaYazdir(){
+        super.EkranaYazdir();
+        System.out.println("Marka : "+Marka);
+        System.out.println("Agirlik : "+Agirlik);
+        System.out.println("TekerSayisi : "+TekerSayisi);
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+  
+}
+,
+
+
+
+
+
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
+
+public class Bmw extends Otomobil {
+    private String Model;
+    private String Renk;
+    private int Fiyat;
+    
+    public Bmw(){
+        
+    }
+    
+    public Bmw(String Model,String Renk,int Fiyat,String Marka,int Agirlik,int TekerSayisi,String AracTuru,int YapimYili){
+        super(Marka,Agirlik,TekerSayisi, AracTuru, YapimYili);
+        
+        this.Model=Model;
+        this.Renk=Renk;
+        this.Fiyat=Fiyat;
+    }
+    
+    String getModel(){
+        return Model;
+    }
+    void setModel(String Model){
+        this.Model=Model;
+    }
+    
+    String getRenk(){
+        return Renk;
+    }
+    void setRenk(String Renk){
+        this.Renk=Renk;
+    }
+    
+    int getFiyat(){
+        return Fiyat;
+    }
+    void setFiyat(int Fiyat){
+        this.Fiyat=Fiyat;
+    }
+    
+    void EkranaYazdir(){
+        super.EkranaYazdir();
+        
+        System.out.println("Model : "+Model);
+        System.out.println("Renk : "+Renk);
+        System.out.println("Fiyat : "+Fiyat);
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+}
